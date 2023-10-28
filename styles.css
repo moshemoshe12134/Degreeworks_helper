@@ -47,7 +47,7 @@ main {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -62,3 +62,4 @@ input[type="text"] {
 .output-container ul li {
     margin-bottom: 10px;
 }
+
