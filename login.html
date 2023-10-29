@@ -58,7 +58,36 @@
             color: #03e9f4;
             font-size: 12px;
         }
+        /* slide animation CSS */
+        .login-box-hidden {
+        transform: translate(-50%, 100vh); /* Initially off-screen */
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        }
+
+        .login-box-visible {
+        transform: translate(-50%, -50%); /* Centered */
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+        }
+
         /* Additional styles for Submit button and animations can go here */
+        .login-box button[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            background-color: #800020;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .login-box button[type="submit"]:hover {
+            background-color: #5c0017;
+            transition: background-color 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -73,17 +102,9 @@
                 <input type="password" name="" required="">
                 <label>Password</label>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </a>
+            <button type="submit">Submit</button>
         </form>
     </div>
+    <script src="slideAnimate.js"></script>
 </body>
 </html>
-
-<!-- https://www.sliderrevolution.com/resources/css-forms/ -->
-
