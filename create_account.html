@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Create Account</title>
     <style>
         html, body {
             margin: 0;
@@ -12,7 +12,7 @@
             align-items: center;
             background: linear-gradient(#800020, #243b55);
         }
-        .login-box {
+        .create-account-box {
             width: 400px;
             padding: 40px;
             position: relative;
@@ -21,16 +21,16 @@
             box-shadow: 0 15px 25px rgba(0,0,0,.6);
             border-radius: 10px;
         }
-        .login-box h2 {
+        .create-account-box h2 {
             margin: 0 0 30px;
             padding: 0;
             color: #fff;
             text-align: center;
         }
-        .login-box .user-box {
+        .create-account-box .user-box {
             position: relative;
         }
-        .login-box .user-box input {
+        .create-account-box .user-box input {
             width: 100%;
             padding: 10px 0;
             font-size: 16px;
@@ -41,7 +41,7 @@
             outline: none;
             background: transparent;
         }
-        .login-box .user-box label {
+        .create-account-box .user-box label {
             position: absolute;
             top: 0;
             left: 0;
@@ -51,28 +51,14 @@
             pointer-events: none;
             transition: .5s;
         }
-        .login-box .user-box input:focus ~ label,
-        .login-box .user-box input:valid ~ label {
+        .create-account-box .user-box input:focus ~ label,
+        .create-account-box .user-box input:valid ~ label {
             top: -20px;
             left: 0;
             color: #960428;
             font-size: 12px;
         }
-        /* slide animation CSS */
-        .login-box-hidden {
-        transform: translate(-50%, 100vh); /* Initially off-screen */
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
-        }
-
-        .login-box-visible {
-        transform: translate(-50%, -50%); /* Centered */
-        opacity: 1;
-        transition: all 0.5s ease-in-out;
-        }
-
-        /* Additional styles for Submit button and animations can go here */
-        .login-box button[type="submit"] {
+        .create-account-box button[type="submit"] {
             display: block;
             margin: 0 auto;
             background-color: #800020;
@@ -81,30 +67,45 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .login-box button[type="submit"]:hover {
-            background-color: #5c0017;
-            transition: background-color 0.3s ease-in-out;
         }
     </style>
 </head>
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form>
+    <div class="create-account-box">
+        <h2>Create Account</h2>
+        <form id="create-account-form">
             <div class="user-box">
-                <input type="text" name="" required="">
+                <input type="email" name="email" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="username" required="">
                 <label>Username</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required="">
+                <input type="password" name="password" id="password" required="">
                 <label>Password</label>
             </div>
-            <button type="submit">Submit</button>
+            <div class="user-box">
+                <input type="password" name="confirm-password" id="confirm-password" required="">
+                <label>Confirm Password</label>
+            </div>
+            <button type="submit">Create Account</button>
         </form>
     </div>
-    <script src="slideAnimate.js"></script>
+    <script>
+        // password confirmation logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("create-account-form");
+            form.addEventListener("submit", function(event) {
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirm-password").value;
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match");
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
