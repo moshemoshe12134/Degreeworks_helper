@@ -1,8 +1,11 @@
+import React from "react";
+import Login from "./components/login"
+
 
 function App() {
   return (
     <div className="App">
-      <p>sup dood</p>
+      <Login/>
     </div>
   );
 }
