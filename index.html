@@ -8,7 +8,7 @@
 <body>
     <header>
         <a href="index.html" class="logo-button">
-            <img src="logo.png" alt="Logo">
+            <img src="logo-no-background.png" alt="Logo" class="logo">
         </a>
         <div class="top-buttons">
             <a href="login.html" class="button">Log In</a>
@@ -19,12 +19,19 @@
 
 
     <main>
-        <div class="input-container">
-            <div class="search-container">
-                <input type="text" placeholder="Search courses...">
+        <div class="outer-container"> 
+            <a href="saved-courses.html" class="saved-button">
+                <img src="noun-saved.png" alt="Saved Courses" class="saved-icon">
+                Saved Courses
+            </a>
+            <div class="input-container">
+                <div class="search-container">
+                    <input type="text" placeholder="Search courses...">
+                </div>
+                <button type="submit" style="width: 38px; height: 38px; border-radius: 10px;">➢</button>
             </div>
-            <button type="submit" style="width: 38px; height: 38px; border-radius: 10px;">➢</button>
         </div>
+        
         <div class="output-container">
             <ul>
                 <li><strong>Course:</strong> Course 1</li>
