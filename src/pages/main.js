@@ -1,10 +1,11 @@
-import {useState,React} from 'react'
-import '../styles.css'
+import {useState,React} from 'react';
 import Results from '../component/results';
+import '../styles.css';
+
 
 function Main() {
   const [query, setQuery] = useState("");
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
 
   //dummy inputs/outputs
   //Input examples: (following degreeworks format)
@@ -17,7 +18,6 @@ function Main() {
     // do something with the query
     setSearch(query);
   };
-  
 
   return (
     <div class='main'>
@@ -42,7 +42,7 @@ function Main() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Main
