@@ -145,6 +145,11 @@ input[type="text"] {
     transform: scale(1.05);
 }
 
+.output-container {
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
 .course {
     display: flex;
     align-items: center;
@@ -159,7 +164,9 @@ table th, table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    word-wrap: break-word;
 }
+
 
 input[type="checkbox"] {
     -webkit-appearance: none;
