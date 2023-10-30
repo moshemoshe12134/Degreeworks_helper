@@ -107,8 +107,9 @@ input[type="text"] {
     border: 0.5px  black;
     justify-content:last baseline;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 3%;
+    margin-left: 80%;
     transition: all 0.2s ease-in-out; 
+    
 }
 
 .input-container{
