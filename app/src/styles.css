@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
@@ -14,19 +14,36 @@ header {
     padding: 20px;
 }
 
-.logo-button {
-    text-decoration: none; 
-}
-
-.logo img {
-    max-width: 100px; 
+.submit{
+    width: 38px;
+    height: 38px; 
+    border-radius: 10px;
 }
 
 .top-buttons {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: 10px;
 }
 
+.button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; 
+}
+
+.input-container > button:nth-child(2)
+{
+    background-color: #8c0628;
+}
 .button {
     background-color: white;
     color: black;
@@ -35,27 +52,68 @@ header {
     border-radius: 5px;
 }
 
+
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.logo-button {
+    text-decoration: none; 
+}
+
+.logo img {
+    max-width: 100px; 
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px  #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-.input-container {
-    margin-bottom: 20px;
-}
-
 input[type="text"] {
     width: 97%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 0px  #ddd;
     border-radius: 5px;
     outline: none;
+}
+
+.input-container{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .search-container {
+      width: -moz-available;
+  }
+
+.search-button {
+    background-color: #800020;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 12;
+    transition: all 0.2s ease-in-out; 
+    border: 0 solid #d9d9e3
+}
+
+.search-button:hover {
+    transform: scale(1.05);
 }
 
 .output-container ul {
@@ -67,3 +125,7 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
+.main {
+    background-color: antiquewhite;
+    
+}
