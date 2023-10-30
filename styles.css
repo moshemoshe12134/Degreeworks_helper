@@ -14,6 +14,14 @@ header {
     padding: 20px;
 }
 
+.logo-button {
+    text-decoration: none; 
+}
+
+.logo img {
+    max-width: 100px; 
+}
+
 .top-buttons {
     display: flex;
     justify-content: flex-end;
@@ -136,18 +144,35 @@ input[type="text"] {
     transform: scale(1.05);
 }
 
-.output-container ul {
-    list-style: none;
-    padding: 0;
+.course {
+    display: flex;
+    align-items: center;
 }
 
-.output-container ul li {
-    margin-bottom: 10px;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.output-container {
-    margin-top: 20px;
+table th, table td {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
+    padding: 8px;
+    text-align: left;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid gray; 
+    border-radius: 50%; 
+    width: 20px; 
+    height: 20px; 
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: gray; 
+    border: 2px solid gray; 
 }
