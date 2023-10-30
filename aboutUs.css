@@ -14,12 +14,16 @@ header {
     padding: 20px;
 }
 
+.button:hover {
+    transform: scale(1.05);
+}
+
 .logo-button {
     text-decoration: none; 
 }
 
 .logo img {
-    max-width: 100px; 
+    max-width: 140px; 
 }
 
 .top-buttons {
@@ -32,8 +36,9 @@ header {
     background-color: white;
     color: black;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
+    transition: all 0.2s ease-in-out; 
 }
 
 .container {
