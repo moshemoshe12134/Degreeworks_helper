@@ -3,7 +3,7 @@ import Results from '../component/results';
 import '../styles.css';
 
 
-function Main() {
+function Main({saveState}) {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
 
@@ -19,30 +19,48 @@ function Main() {
     setSearch(query);
   };
 
-  return (
-    <div class='main'>
-      <div class="top-buttons">
-          <a href="login.html" class="button">Log In</a>
-          <a href="create_account.html" class="button">Create Account</a>
-          <a href="aboutUs.html" class="button">About</a>
-      </div>
-
-      <div class = 'main-square'>
-        <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit">Search</button>
-        </form>
-        <div class='results'>
-          <Results search={search}></Results>
+  if(!saveState){
+    return (
+      <div class='main'>
+        <div class="top-buttons">
+            <a href="login.html" class="button">Log In</a>
+            <a href="create_account.html" class="button">Create Account</a>
+            <a href="aboutUs.html" class="button">About</a>
+        </div>
+  
+        <div class = 'main-square'>
+          <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button type="submit">Search</button>
+          </form>
+          <div class='results'>
+            <Results search={search} saveState={saveState}></Results>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }else{
+    return (
+      <div class='main'>
+        <div class="top-buttons">
+            <a href="login.html" class="button">Log In</a>
+            <a href="create_account.html" class="button">Create Account</a>
+            <a href="aboutUs.html" class="button">About</a>
+        </div>
+  
+        <div class = 'main-square'>
+          <div class='results'>
+            <Results search={search} saveState={saveState}></Results>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Main

@@ -9,7 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>}> </Route>
         <Route path="/Login" element={<Login/>}></Route>
-        <Route path="/Main" element={<Main/>}></Route>
+        <Route path="/Main" element={<Main saveState={false}/>}></Route>
+        <Route path="/Saved" element={<Main saveState={true}/>}></Route>
       </Routes>
     </BrowserRouter>
   );
