@@ -8,29 +8,54 @@ function Results({search, saveState}) {
   const handleCheckChange = (classLabel, isChecked) => {
     if (isChecked) {
       // Add the item to the list
+      console.log("entered");
       setSavedItems([...savedItems, classLabel]);
     } else {
       // Remove the item from the list
       setSavedItems(savedItems.filter(item => item !== classLabel));
     }
-    console.log(isChecked);
   };
-
-
-    //2. be able to diplay the data 
-    //3. create save feature
 
     //dummy inputs/outputs
     //Input examples: (following degreeworks format)
     //Example #1 “CISC. 3140 or 3142 or 3160 or 3171 or 3220”
     //Example #2 “ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400”
     //Example #3 “BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201
-    
-    //make a function that returns a list of the classes
-    //make a function that maps the list of classes to the checkbox
-    //style checkbox to look decent
 
-    
+    function addItem(item){
+      const newItem = { name: 'Example Item' };
+
+      axios.post('http://localhost:3000/api/saved-items', newItem)
+        .then((response) => {
+          console.log('Item saved:', response.data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
+    function removeItem(){
+      const itemIdToRemove = '123'; // Replace with the actual ID of the item you want to remove
+
+      axios.delete(`http://localhost:3000/api/saved-items/${itemIdToRemove}`)
+        .then((response) => {
+          console.log('Item removed:', response.data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
+    function getSavedItems(){
+      axios.get('http://localhost:3000/api/saved-items')
+        .then((response) => {
+          const savedItems = response.data;
+          console.log('Saved Items:', savedItems);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
 
     var classList = (names) =>{
       var result = [];
@@ -51,7 +76,7 @@ function Results({search, saveState}) {
     }
 
     const Saved = () => {
-      
+      console.log(savedItems)
         return (
           <div>
             <h1>Checked Items:</h1>
