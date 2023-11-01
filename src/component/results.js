@@ -3,6 +3,20 @@ import Checkbox from './checkbox'
 import Classes from '../data';
 
 function Results({search, saveState}) {
+  const [savedItems, setSavedItems] = useState([]);
+
+  const handleCheckChange = (classLabel, isChecked) => {
+    if (isChecked) {
+      // Add the item to the list
+      setSavedItems([...savedItems, classLabel]);
+    } else {
+      // Remove the item from the list
+      setSavedItems(savedItems.filter(item => item !== classLabel));
+    }
+    console.log(isChecked);
+  };
+
+
     //2. be able to diplay the data 
     //3. create save feature
 
@@ -36,10 +50,16 @@ function Results({search, saveState}) {
       return result;
     }
 
-    const Saved = ({ data }) => {
+    const Saved = () => {
+      
         return (
           <div>
-            The data is: {}
+            <h1>Checked Items:</h1>
+              <ul>
+                {savedItems.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
           </div>
         );
       }
@@ -51,7 +71,7 @@ function Results({search, saveState}) {
         return(
           <div>
           {classes.map((item, index) => (
-            <Checkbox key={index} className={item.name} classInfo={item.info}></Checkbox>
+            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
           ))}
           </div>
         );

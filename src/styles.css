@@ -139,7 +139,11 @@ input[type="text"] {
 }
 .checkbox-wrapper{
     background-color: antiquewhite;
-    flex-direction: row;
+    display: inline-block;
     box-sizing: border-box;
     border-radius: 10px;
+}
+
+.float{
+    float:left;
 }
