@@ -16,20 +16,20 @@ function Results({search, saveState}) {
     //make a function that maps the list of classes to the checkbox
     //style checkbox to look decent
 
-    const classObj = {
-      name: String,
-      info: String
-    }
+    
 
-    var classList = (list, names) =>{
+    var classList = (names) =>{
       var result = [];
-      for (const [key, value] of list) {
+      for (const [key, value] of Classes) {
         for (var x of names){
           if(key === x){
-            var object = classObj;
-            object.name = key;
-            object.name = value;
-            result.push(object)
+            let classObj = {
+              name: String,
+              info: String
+            }
+            classObj.name = key;
+            classObj.info = value;
+            result.push(classObj);
           }
         }
       }
@@ -47,7 +47,7 @@ function Results({search, saveState}) {
       //classList(Classes, ["CISC 3140", "CISC 3142", "CISC 3160", "CISC 3171", "CISC 3220"]);
     if(!saveState){
       if(search === "CISC. 3140 or 3142 or 3160 or 3171 or 3220"){
-        const classes = classList(Classes, ["CISC 3140", "CISC 3142", "CISC 3160", "CISC 3171", "CISC 3220"]);
+        const classes = classList(["CISC 3140", "CISC 3142", "CISC 3160", "CISC 3171", "CISC 3220"]);
         return(
           <div>
           {classes.map((item, index) => (

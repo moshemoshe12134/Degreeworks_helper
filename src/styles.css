@@ -125,14 +125,21 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
+
 .main-square {
-    background-color: antiquewhite;
     width: 800px;
     height: 500px;
     padding: 40px;
     position: relative;
-    background: antiquewhite;
+    background: rgb(220,220,220);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    overflow: scroll;
+}
+.checkbox-wrapper{
+    background-color: antiquewhite;
+    flex-direction: row;
+    box-sizing: border-box;
     border-radius: 10px;
 }
