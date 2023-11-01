@@ -1,11 +1,12 @@
 import { useState } from "react";
-const Checkbox = ({ label }) => {
+const Checkbox = ({ className, classInfo }) => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="checkbox-wrapper">
       <label>
         <input type="checkbox" checked={isChecked} />
-        <span>{label}</span>
+        <h3>{className}</h3>
+        <p>{classInfo}</p>
       </label>
     </div>
   );
