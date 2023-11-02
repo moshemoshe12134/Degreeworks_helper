@@ -159,3 +159,40 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.btn-regular{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #535b61; /* Change this to your preferred button color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline from the link */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-saved{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #718da3; /* Change this to your preferred button color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline from the link */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-main{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4b97d1; /* Change this to your preferred button color */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline from the link */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

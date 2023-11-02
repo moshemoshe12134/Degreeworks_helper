@@ -1,7 +1,7 @@
 import {useState,React} from 'react';
 import Results from '../component/results';
+import Navbar from '../component/navbar';
 import '../styles.css';
-
 
 function Main({saveState}) {
   const [query, setQuery] = useState("");
@@ -21,13 +21,8 @@ function Main({saveState}) {
 
   if(!saveState){
     return (
-      <div class='main'>
-        <div class="top-buttons">
-            <a href="login.html" class="button">Log In</a>
-            <a href="create_account.html" class="button">Create Account</a>
-            <a href="aboutUs.html" class="button">About</a>
-        </div>
-  
+      <div>
+        <Navbar variant = {false}></Navbar>
         <div class = 'main-square'>
           <form onSubmit={handleSubmit}>
           <input
@@ -43,16 +38,12 @@ function Main({saveState}) {
           </div>
         </div>
       </div>
+      
     );
   }else{
     return (
-      <div class='main'>
-        <div class="top-buttons">
-            <a href="login.html" class="button">Log In</a>
-            <a href="create_account.html" class="button">Create Account</a>
-            <a href="aboutUs.html" class="button">About</a>
-        </div>
-  
+      <div>
+        <Navbar variant= {true}></Navbar>
         <div class = 'main-square'>
           <div class='results'>
             <Results search={search} saveState={saveState}></Results>
