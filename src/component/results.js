@@ -136,14 +136,24 @@ function Results({search, saveState}) {
       }
         
       if(search === "ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400"){
+        const classes = classList(["ECON 2200", "FINC 3310", "FINC 3330", "ECON 3400"]);
         return(
-          <div>2</div>  
+          <div>
+          {classes.map((item, index) => (
+            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
+          ))}
+          </div>
         );
       }
         
       if(search === "BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201"){
+        const classes = classList(["BIOL 1002", "BIOL 3003", "BIOL 3004", "CHEM 2200", "CHEM 2201"]);
         return(
-          <div>3</div>  
+          <div>
+          {classes.map((item, index) => (
+            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
+          ))}
+          </div>
         );
       }
         
