@@ -15,7 +15,7 @@ function Results({search, saveState}) {
 
   useEffect(() => {
     if(saveState){
-      axios.get('http://localhost:3001/api/saved-items')
+      axios.get('https://degreeworks.netlify.app/.netlify/functions/api')
         .then((response) => {
           const receivedItems = response.data;
 
@@ -35,7 +35,7 @@ function Results({search, saveState}) {
     function addItem(item){
       const newItem = item;
 
-      axios.post('http://localhost:3001/api/saved-items', newItem)
+      axios.post('https://degreeworks.netlify.app/.netlify/functions/api/add/', newItem)
         .then((response) => {
           console.log('Item saved:', response.data);
         })
@@ -48,7 +48,7 @@ function Results({search, saveState}) {
       if(classLabel){
         const itemIdToRemove = classLabel.name; // Replace with the actual ID of the item you want to remove
 
-          axios.delete(`http://localhost:3001/api/saved-items/${itemIdToRemove}`)
+          axios.delete(`https://degreeworks.netlify.app/.netlify/functions/api/delete-item/${itemIdToRemove}`)
             .then((response) => {
               const receivedItems = response.data;
               console.log('Item removed:', response.data);
@@ -80,13 +80,16 @@ function Results({search, saveState}) {
 
     function createArray(object){
       let array = [];
-      for(let i = 0; i < object.length;i++){
-        let classObj = {
-          name: object[i].name,
-          info: object[i].info
+      if (object.length > 0){
+        for(let i = 1; i < object.length;i++){
+          let classObj = {
+            name: object[i].name,
+            info: object[i].info
+          }
+          array.push(classObj);
         }
-        array.push(classObj);
       }
+      
       return array;  
     }
 
