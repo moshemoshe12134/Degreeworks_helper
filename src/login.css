@@ -50,7 +50,7 @@ html, body {
 .login-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #960428;
     font-size: 12px;
 }
 /* slide animation CSS */
@@ -66,7 +66,6 @@ opacity: 1;
 transition: all 0.5s ease-in-out;
 }
 
-/* Additional styles for Submit button and animations can go here */
 .login-box button[type="submit"] {
     display: block;
     margin: 0 auto;
@@ -81,5 +80,6 @@ transition: all 0.5s ease-in-out;
 
 .login-box button[type="submit"]:hover {
     background-color: #5c0017;
-    transition: background-color 0.3s ease-in-out;
+    transform: scale(1.03); 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }

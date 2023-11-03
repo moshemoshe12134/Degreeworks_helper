@@ -9,7 +9,7 @@ function Navbar(variant) {
         return (
         <div class='main'>
             <div class="top-buttons">
-                <Link to="/saved" className="btn-main" onClick={()=>{setSave(true)}}>See Saved</Link>
+                <Link to="/saved" className="btn-main" onClick={()=>{setSave(true)}}>See Saved Searches</Link>
                 <Link to="/login" className="btn-regular" >Login</Link>
                 <Link to="/aboutus" className="btn-regular" >About Us</Link>
             </div>

@@ -1,3 +1,13 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#800020, #370b0b);
+}
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -39,11 +49,12 @@ header {
     cursor: pointer;
     transition: all 0.2s ease-in-out; 
 }
-
+/*
 .input-container > button:nth-child(2)
 {
     background-color: #8c0628;
 }
+*/
 .button {
     background-color: white;
     color: black;
@@ -79,14 +90,15 @@ main {
 
 input[type="text"] {
     width: 97%;
-    padding: 10px;
     border: 0px  #ddd;
-    border-radius: 5px;
     outline: none;
+    font-size: 16px;
+    line-height: 22px;
 }
 
+
 .input-container{
-    width: 100%;
+    width: 55%;
     border: 1px solid #ddd;
     border-radius: 10px;
     outline: none;
@@ -94,7 +106,20 @@ input[type="text"] {
     display: flex;
     align-items: center;
     padding: 5px;
+    gap: 10px;
+    margin-left: 25%;
+    margin-right: 75%;
   }
+
+  .search-input {
+    border-radius: 24px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+  }
+
   .search-container {
       width: -moz-available;
   }
@@ -103,17 +128,20 @@ input[type="text"] {
     background-color: #800020;
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 14px;
+    border-radius: 4px;
     border: none;
     cursor: pointer;
-    font-size: 12;
+    font-size: 14px;
     transition: all 0.2s ease-in-out; 
     border: 0 solid #d9d9e3
+    
 }
 
 .search-button:hover {
-    transform: scale(1.05);
+    background-color: #6e051f;
+    transform: scale(1.03); 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 .output-container ul {
@@ -128,20 +156,24 @@ input[type="text"] {
 
 .main-square {
     width: 800px;
-    height: 500px;
+    height: 550px;
     padding: 40px;
     position: relative;
     background: rgb(220,220,220);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .checkbox-wrapper{
-    background-color: antiquewhite;
+    background-color: #f6f4f1;
     display: inline-block;
     box-sizing: border-box;
     border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 9px;
 }
 
 .float{
@@ -188,7 +220,7 @@ input[type="text"] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4b97d1; /* Change this to your preferred button color */
+    background-color: #718da3; /* Change this to your preferred button color */
     color: #ffffff; /* Text color */
     text-decoration: none; /* Remove underline from the link */
     border: none;
@@ -196,3 +228,14 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+
+  /* Define a global class in your CSS file */
+.bg-saved {
+    background: #800020; /* Background for saved state */
+  }
+  
+  .bg-not-saved {
+    background: linear-gradient(#800020, #7d1313); /* Background for default state */
+  }
+  

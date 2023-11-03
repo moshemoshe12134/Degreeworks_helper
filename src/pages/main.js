@@ -1,51 +1,59 @@
-import {useState,React} from 'react';
+import React, { useState, useEffect } from 'react'; 
 import Results from '../component/results';
 import Navbar from '../component/navbar';
 import '../styles.css';
 
-function Main({saveState}) {
+function Main({ saveState }) {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
 
-  //dummy inputs/outputs
-  //Input examples: (following degreeworks format)
-  //Example #1 “CISC. 3140 or 3142 or 3160 or 3171 or 3220”
-  //Example #2 “ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400”
-  //Example #3 “BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201
+  useEffect(() => {
+    // Set the background when the component mounts or saveState changes
+    document.body.style.background = saveState
+      ? 'linear-gradient(#800020, #370b0b)'  // Background for saved state
+      : 'linear-gradient(#800020, #370b0b)'; // Background for default state
+    
+    // Reset the background when the component unmounts
+    return () => {
+      document.body.style.background = 'linear-gradient(#800020, #243b55)'; // Reset to the default gradient
+    };
+  }, [saveState]); // This effect runs when saveState changes
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // do something with the query
     setSearch(query);
   };
 
-  if(!saveState){
+  if (!saveState) {
     return (
       <div>
-        <Navbar variant = {false}></Navbar>
-        <div class = 'main-square'>
-          <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <button type="submit">Search</button>
+        <Navbar variant={false}></Navbar>
+        <div className='main-square'> 
+          <form onSubmit={handleSubmit} className="input-container"> 
+            <input
+              type="text"
+              placeholder="Search..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="search-container" 
+            />
+            <button type="submit" className="search-button"> 
+              Search
+            </button>
           </form>
-          <div class='results'>
+          <div className='results'>
             <Results search={search} saveState={saveState}></Results>
           </div>
         </div>
       </div>
-      
     );
-  }else{
+  } else {
     return (
       <div>
-        <Navbar variant= {true}></Navbar>
-        <div class = 'main-square'>
-          <div class='results'>
+        <Navbar variant={true}></Navbar>
+        <div className='main-square'>
+          <div className='results'>
             <Results search={search} saveState={saveState}></Results>
           </div>
         </div>
