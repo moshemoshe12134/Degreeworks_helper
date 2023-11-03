@@ -81,7 +81,7 @@ function Results({search, saveState}) {
     function createArray(object){
       let array = [];
       if (object.length > 0){
-        for(let i = 1; i < object.length;i++){
+        for(let i = 0; i < object.length;i++){
           let classObj = {
             name: object[i].name,
             info: object[i].info
@@ -105,67 +105,41 @@ function Results({search, saveState}) {
         removeItem(classLabel);
       }
     };
-
     const Saved = () => {
-        return (
-          <div>
-            <h1>Saved Items:</h1>
-                {savedItems.map((item, index) => (
-                    <div key={index}>
-                      <div class="float">
-                        <h3>{item.name}</h3>
-                        <p> {item.info}</p>
-                      </div>
-                      <button class="remove-button" onClick={()=>{setTarget(item)}}>Remove</button>
-                    </div>
-                ))}
-          </div>
-        );
+      return (
+        <div className="saved-items-container">
+          <h1>Saved Items:</h1>
+          {savedItems.map((item, index) => (
+            <div key={index} className="float">
+              <h3>{item.name}</h3>
+              <p>{item.info}</p>
+              <button className="remove-button" onClick={() => setTarget(item)}>Remove</button>
+            </div>
+          ))}
+        </div>
+      );
+    };
+
+    if (!saveState) {
+      let classes;
+      if (search === "CISC. 3140 or 3142 or 3160 or 3171 or 3220") {
+        classes = classList(["CISC 3140", "CISC 3142", "CISC 3160", "CISC 3171", "CISC 3220"]);
+      } else if (search === "ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400") {
+        classes = classList(["ECON 2200", "FINC 3310", "FINC 3330", "ECON 3400"]);
+      } else if (search === "BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201") {
+        classes = classList(["BIOL 1002", "BIOL 3003", "BIOL 3004", "CHEM 2200", "CHEM 2201"]);
       }
 
-    if(!saveState){
-      if(search === "CISC. 3140 or 3142 or 3160 or 3171 or 3220"){
-        const classes = classList(["CISC 3140", "CISC 3142", "CISC 3160", "CISC 3171", "CISC 3220"]);
-        return(
-          <div>
-          {classes.map((item, index) => (
-            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
+      return (
+        <div>
+          {classes && classes.map((item, index) => (
+            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange} />
           ))}
-          </div>
-        );
-      }
-        
-      if(search === "ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400"){
-        const classes = classList(["ECON 2200", "FINC 3310", "FINC 3330", "ECON 3400"]);
-        return(
-          <div>
-          {classes.map((item, index) => (
-            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
-          ))}
-          </div>
-        );
-      }
-        
-      if(search === "BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201"){
-        const classes = classList(["BIOL 1002", "BIOL 3003", "BIOL 3004", "CHEM 2200", "CHEM 2201"]);
-        return(
-          <div>
-          {classes.map((item, index) => (
-            <Checkbox key={index} className={item.name} classInfo={item.info} onCheckChange={handleCheckChange}></Checkbox>
-          ))}
-          </div>
-        );
-      }
-        
-    }else{
-      return(
-        <Saved></Saved>
+        </div>
       );
+    } else {
+      return <Saved />;
     }
- 
-    return(
-        <div></div>
-    );
 
 }
 

@@ -7,6 +7,7 @@ function Main({ saveState }) {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
 
+  /*
   useEffect(() => {
     // Set the background when the component mounts or saveState changes
     document.body.style.background = saveState
@@ -18,7 +19,7 @@ function Main({ saveState }) {
       document.body.style.background = 'linear-gradient(#800020, #243b55)'; // Reset to the default gradient
     };
   }, [saveState]); // This effect runs when saveState changes
-
+*/
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +37,7 @@ function Main({ saveState }) {
               placeholder="Search..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="search-container" 
+              className="search-input" 
             />
             <button type="submit" className="search-button"> 
               Search
