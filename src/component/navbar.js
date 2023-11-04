@@ -10,8 +10,10 @@ function Navbar({ variant }) { // Use destructuring here to get the variant prop
         <div className={save ? 'saved' : 'main'}>
             <div className="top-buttons">
                 <div className="logo-container">
-                    <img src={logo} alt="Logo" className="header-logo" />
-                </div>
+                    <Link to="/main">
+                        <img src={logo} alt="Logo" className="header-logo" />
+                    </Link>
+            </div>
                 <div className="title-container">
                     {save ? (
                         <Link to="/main" className="btn-saved" onClick={() => setSave(false)}>New Search</Link>
@@ -26,4 +28,6 @@ function Navbar({ variant }) { // Use destructuring here to get the variant prop
     );
 }
 
+
 export default Navbar;
+
