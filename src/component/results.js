@@ -108,12 +108,12 @@ function Results({search, saveState}) {
     const Saved = () => {
       return (
         <div className="saved-items-container">
-          <h1>Saved Items:</h1>
+          <h1 id="saved-items-heading">Saved Items:</h1>
           {savedItems.map((item, index) => (
             <div key={index} className="float">
               <h3>{item.name}</h3>
               <p>{item.info}</p>
-              <button className="remove-button" onClick={() => setTarget(item)}>Remove</button>
+              <button className="remove-button" onClick={() => setTarget(item)}>✕</button>
             </div>
           ))}
         </div>

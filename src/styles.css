@@ -32,10 +32,11 @@ header {
 
 .top-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: start;
     align-items: center;
     gap: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
+    
 }
 
 .button {
@@ -70,13 +71,6 @@ header {
     transform: scale(1.05);
 }
 
-.logo-button {
-    text-decoration: none; 
-}
-
-.logo img {
-    max-width: 100px; 
-}
 
 main {
     max-width: 800px;
@@ -180,6 +174,7 @@ input[type="text"] {
 .checkbox-wrapper input[type="checkbox"] {
     transform: scale(1.5);
     margin: 5px;
+    cursor: pointer;
 }
 
 
@@ -189,14 +184,18 @@ input[type="text"] {
 
 .remove-button{
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
+    padding: 6px 18px;
+    font-size: 18px;
+    background-color: #000000;
     color: #ffffff; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.remove-button:hover{
+    transform: scale(1.03); 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 .btn-regular{
@@ -210,6 +209,7 @@ input[type="text"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    max-width: 26%;
 }
 .btn-saved{
     display: inline-block;
@@ -222,18 +222,35 @@ input[type="text"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    max-width: 26%;
 }
 .btn-main{
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #718da3; /* Change this to your preferred button color */
-    color: #ffffff; /* Text color */
-    text-decoration: none; /* Remove underline from the link */
+    background-color: #718da3;
+    color: #ffffff; 
+    text-decoration: none; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    max-width: 26%;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #718da3;
+    color: #ffffff; 
+    text-decoration: none; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 26%;
+    margin-bottom: 4%;
 }
 
 
@@ -249,13 +266,33 @@ input[type="text"] {
   .logo-container {
     display: flex;
     align-items: center;
+    padding-right: 35%;
 }
+
+.logo-button {
+    text-decoration: none; 
+}
+
+.logo img {
+    max-width: 100px; 
+}
+
 
 .header-logo {
-    max-width: 100px; 
+    max-width: 140px; 
     width: auto; 
+    float: left;
 }
 
-.saved-items-container {
+h1 {
     text-align: center;
+}
+
+
+.title-container {
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
