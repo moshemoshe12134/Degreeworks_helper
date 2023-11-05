@@ -136,7 +136,7 @@ input[type="text"] {
 .search-button:hover {
     background-color: #6e051f;
     transform: scale(1.03); 
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
 }
 
 .output-container ul {
@@ -194,12 +194,12 @@ input[type="text"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.18s ease;
     margin-bottom: 10px;
  }
 .save-button:hover {
-    transform: scale(1.05); 
-    transition: background-color 0.15s ease-in-out, transform 0.3s ease-in-out; 
+    transform: scale(1.03); 
+    transition: background-color 0.15s ease-in-out, transform 0.2s ease-in-out; 
     background-color: rgb(113, 110, 110);
 }
 
@@ -236,7 +236,7 @@ input[type="text"] {
     display: inline-block;
     padding: 6px 18px;
     font-size: 18px;
-    background-color: #000000;
+    background-color: rgb(78, 74, 74);
     color: #ffffff; 
     border: none;
     border-radius: 4px;
@@ -245,7 +245,8 @@ input[type="text"] {
 }
 .remove-button:hover{
     transform: scale(1.03); 
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; 
+    transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
+    background-color: rgb(71, 67, 67);
 }
 
 .btn-regular{
@@ -310,15 +311,22 @@ input[type="text"] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #718da3;
     color: #ffffff; 
     text-decoration: none; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.18s ease;
     max-width: 26%;
+    border: 1px solid #7c5a5a;
     margin-bottom: 4%;
+}
+
+.btn-back:hover{
+    transform: scale(1.01); 
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; 
+    background-color: rgb(131, 122, 122);
+    border: 1px solid #544444;
 }
 
 .bg-saved {
