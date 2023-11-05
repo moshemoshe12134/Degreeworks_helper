@@ -168,18 +168,44 @@ input[type="text"] {
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 9px;
+    padding-top: 5px;
 }
 
 .checkbox-wrapper-checked {
     background-color: #f6f4f1; 
     display: inline-block;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 4px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 9px;
+    padding-top: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
  }
+
+ .save-button {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 14px;
+    background-color: rgb(132, 127, 127);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+ }
+.save-button:hover {
+    transform: scale(1.02); 
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+}
+
+.save-button.saved {
+    background-color: rgb(89, 86, 86);
+    margin-bottom: 10px;
+    padding-left: 19px;
+    padding-right: 19px;
+  }
 
 .checkbox-wrapper input[type="checkbox"] {
     transform: scale(1.5);

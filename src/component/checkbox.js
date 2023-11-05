@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
 
 const Checkbox = ({ className, classInfo, onCheckChange }) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
 
   const label = {
     name: className,
     info: classInfo
   }
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-    onCheckChange(label, !isChecked);
+  const handleSave = () => {
+    const newSavedState = !isSaved;
+    setIsSaved(newSavedState);
+    onCheckChange(label, newSavedState);
   };
 
   return (
-    <div className={`checkbox-wrapper ${isChecked ? 'checkbox-wrapper-checked' : ''}`}>
-      <label>
-        <div>
-          <input className="float" type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
-        </div>
-        <div className="float">
-          <h3>{className}</h3>
-          <p>{classInfo}</p>
-        </div>
-      </label>
+    <div className={`checkbox-wrapper ${isSaved ? 'checkbox-wrapper-checked' : ''}`}>
+      <div className="class-info">
+        <h3>{className}</h3>
+        <p>{classInfo}</p>
+      </div>
+      <button className={`save-button ${isSaved ? 'saved' : ''}`} onClick={handleSave}>
+        {isSaved ? '  ✕  ' : 'Save'}
+      </button>
     </div>
   );
 };
 export default Checkbox;
+
