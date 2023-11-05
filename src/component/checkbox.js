@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+
 const Checkbox = ({ className, classInfo, onCheckChange }) => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -13,16 +14,15 @@ const Checkbox = ({ className, classInfo, onCheckChange }) => {
   };
 
   return (
-    <div className="checkbox-wrapper">
+    <div className={`checkbox-wrapper ${isChecked ? 'checkbox-wrapper-checked' : ''}`}>
       <label>
         <div>
-          <input class="float" type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
+          <input className="float" type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
         </div>
-        <div class="float">
+        <div className="float">
           <h3>{className}</h3>
-          <p> {classInfo}</p>
+          <p>{classInfo}</p>
         </div>
-        
       </label>
     </div>
   );

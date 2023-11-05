@@ -162,7 +162,7 @@ input[type="text"] {
     overflow-x: hidden;
 }
 .checkbox-wrapper{
-    background-color: #f6f4f1;
+    background-color: #e4dfd9;
     display: inline-block;
     box-sizing: border-box;
     border-radius: 10px;
@@ -171,12 +171,21 @@ input[type="text"] {
     padding-top: 9px;
 }
 
+.checkbox-wrapper-checked {
+    background-color: #f6f4f1; 
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 9px;
+ }
+
 .checkbox-wrapper input[type="checkbox"] {
     transform: scale(1.5);
-    margin: 5px;
     cursor: pointer;
-}
 
+}
 
 .float{
     float:left;
@@ -253,8 +262,6 @@ input[type="text"] {
     margin-bottom: 4%;
 }
 
-
-  /* Define a global class in your CSS file */
 .bg-saved {
     background: #800020; /* Background for saved state */
   }
