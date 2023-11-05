@@ -128,7 +128,7 @@ input[type="text"] {
     border: none;
     cursor: pointer;
     font-size: 14px;
-    transition: all 0.2s ease-in-out; 
+    transition: all 0.15s ease-in-out; 
     border: 0 solid #d9d9e3
     
 }
@@ -169,6 +169,7 @@ input[type="text"] {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
+    transition: all 0.1s ease-in-out;
 }
 
 .checkbox-wrapper-checked {
@@ -181,6 +182,7 @@ input[type="text"] {
     padding-top: 5px;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    border: 1px solid #ffffff;
  }
 
  .save-button {
@@ -196,13 +198,22 @@ input[type="text"] {
     margin-bottom: 10px;
  }
 .save-button:hover {
-    transform: scale(1.02); 
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
+    transform: scale(1.05); 
+    transition: background-color 0.15s ease-in-out, transform 0.3s ease-in-out; 
+    background-color: rgb(113, 110, 110);
 }
 
 .save-button.saved {
-    background-color: rgb(89, 86, 86);
+    background-color: rgb(78, 74, 74);
     margin-bottom: 10px;
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .save-button.saved:hover {
+    transform: scale(1.04); 
+    transition: background-color 0.15s ease-in-out, transform 0.3s ease-in-out; 
+    background-color: rgb(104, 99, 99);
     padding-left: 19px;
     padding-right: 19px;
   }
@@ -215,6 +226,10 @@ input[type="text"] {
 
 .float{
     float:left;
+    border: 1px solid #ffffff;
+    padding: 9px;
+    border-radius: 5px;
+    background-color: #f6f4f1;
 }
 
 .remove-button{
@@ -243,34 +258,52 @@ input[type="text"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.18s ease;
     max-width: 26%;
+}
+.btn-regular:hover{
+    transition: background-color 0.18s ease-in-out;
+    background-color: rgb(130, 120, 120);
 }
 .btn-saved{
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #718da3;
     color: #ffffff; 
     text-decoration: none; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.18s ease;
     max-width: 26%;
+    border: 1px solid #7c5a5a;
+}
+
+.btn-saved:hover{
+    transform: scale(1.01); 
+    transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out; 
+    background-color: rgb(131, 122, 122);
+    border: 1px solid #544444;
 }
 .btn-main{
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #718da3;
     color: #ffffff; 
     text-decoration: none; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.18s ease;
     max-width: 26%;
+    border: 1px solid #7c5a5a;
+}
+
+.btn-main:hover{
+    transform: scale(1.01); 
+    transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out; 
+    background-color: rgb(131, 122, 122);
+    border: 1px solid #544444;
 }
 
 .btn-back {
@@ -289,7 +322,8 @@ input[type="text"] {
 }
 
 .bg-saved {
-    background: #800020; /* Background for saved state */
+    background: #800020; 
+    
   }
   
   .bg-not-saved {
