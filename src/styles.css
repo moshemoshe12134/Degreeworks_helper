@@ -91,6 +91,9 @@ input[type="text"] {
     line-height: 22px;
 }
 
+::placeholder {
+    font-size: 14px;
+  }
 
 .input-container{
     width: 55%;
@@ -100,7 +103,6 @@ input[type="text"] {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    padding: 5px;
     gap: 10px;
     margin-left: 25%;
     margin-right: 75%;
@@ -135,8 +137,9 @@ input[type="text"] {
 
 .search-button:hover {
     background-color: #6e051f;
-    transform: scale(1.03); 
+    transform: scale(1.01); 
     transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
+
 }
 
 .output-container ul {
@@ -253,18 +256,19 @@ input[type="text"] {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: rgb(146 136 136);
-    color: #ffffff; 
-    text-decoration: none; 
+    background-color: #EDEDEC;
+    text-decoration: none;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.18s ease;
     max-width: 26%;
+    color: #666
 }
 .btn-regular:hover{
     transition: background-color 0.18s ease-in-out;
     background-color: rgb(130, 120, 120);
+    color: #ffffff;
 }
 .btn-saved{
     display: inline-block;
@@ -297,14 +301,14 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.18s ease;
     max-width: 26%;
-    border: 1px solid #7c5a5a;
+    border: 1px solid rgb(220,220,220);
 }
 
 .btn-main:hover{
     transform: scale(1.01); 
-    transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out; 
+    transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
     background-color: rgb(131, 122, 122);
-    border: 1px solid #544444;
+    border: 0.2px solid rgb(220,220,220);
 }
 
 .btn-back {

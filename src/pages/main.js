@@ -34,7 +34,9 @@ function Main({ saveState }) {
           <form onSubmit={handleSubmit} className="input-container"> 
             <input
               type="text"
-              placeholder="Search..."
+              /* placeholder="Enter course name..." */
+              placeholder="CISC. 3140 or 3142 or ..."
+              placeholderTextSize="5px"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="search-input" 
