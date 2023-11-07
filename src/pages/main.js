@@ -36,7 +36,6 @@ function Main({ saveState }) {
               type="text"
               /* placeholder="Enter course name..." */
               placeholder="CISC. 3140 or 3142 or ..."
-              placeholderTextSize="5px"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="search-input" 

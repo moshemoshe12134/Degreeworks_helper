@@ -5,7 +5,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#800020, #243b55);
+    background: linear-gradient(#800020, #370b0b);
 }
 .login-box {
     width: 400px;

@@ -6,17 +6,20 @@ function AboutUs() {
   return (
     <div>
       <Link to="/main" className="btn-back" >back</Link>
-      <div class="main-square">
-          <h1>About Us</h1>
-          <p>Quick introduction.</p>
-          <h2>Our Story</h2>
-          <p>Maybe something about why we're making this website.</p>
-          <h2>Our Team</h2>
-          <p>All members and something about us.</p>
-          <h2>Contact Information</h2>
-          <p>If you have any questions or would like to get in touch, you can contact us at <a href="mailto:abdultasin16@email.com">abdultasin16@email.com</a>.</p>
-      </div>
-    </div>
+            <div className="main-square">
+                <h1>About</h1>
+                <p>
+                Finding courses at Brooklyn College can be difficult and time-consuming.
+
+      The Brooklyn College Course Selector lets you quickly look up multiple class descriptions at once by entering course codes separated by commas, spaces, or returns. No more decoding strings of letters and numbers!          
+                </p>
+                <br />
+                <h1>FAQ:</h1>
+                <p>
+                <h2>How to use:</h2> <ul> <li>Enter 2-4 letter/number codes from DegreeWorks</li> <li>Separate codes with commas, spaces, or returns</li> <li>Hit enter or Search to see full descriptions</li> <li>Click Save to save favorites</li> <li>Click again to remove from Saved Items</li> </ul> <h2>What's displayed:</h2> <ul> <li>Course title and full description</li> <li>Credits, prerequisites</li> </ul>
+                </p>
+            </div>
+          </div>
     
   )
 }

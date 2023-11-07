@@ -15,6 +15,10 @@ body {
     background-color: #f8f8f8;
 }
 
+p {
+    margin-bottom: 20px;
+  }
+
 header {
     background-color: #800020;
     color: #fff;
@@ -155,7 +159,7 @@ input[type="text"] {
 .main-square {
     width: 800px;
     height: 550px;
-    padding: 40px;
+    padding: 30px;
     position: relative;
     background: rgb(220,220,220);
     box-sizing: border-box;
@@ -285,10 +289,10 @@ input[type="text"] {
 }
 
 .btn-saved:hover{
-    transform: scale(1.01); 
-    transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out; 
+    transform: scale(1.01);
+    transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out;
     background-color: rgb(131, 122, 122);
-    border: 1px solid #544444;
+    border: 0.18px solid #544444;
 }
 .btn-main{
     display: inline-block;
@@ -301,14 +305,14 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.18s ease;
     max-width: 26%;
-    border: 1px solid rgb(220,220,220);
+    border: 0.9px solid rgb(220,220,220);
 }
 
 .btn-main:hover{
-    transform: scale(1.01); 
-    transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
+    transform: scale(1.01);
+    transition: background-color 0.15s ease-in-out, transform 0.18s ease-in-out;
     background-color: rgb(131, 122, 122);
-    border: 0.2px solid rgb(220,220,220);
+    border: 0.1px solid rgb(131, 122, 122);
 }
 
 .btn-back {
