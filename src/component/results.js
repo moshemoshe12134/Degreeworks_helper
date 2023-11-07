@@ -11,6 +11,8 @@ import Classes from '../data';
 function Results({search, saveState}) {
   const [savedItems, setSavedItems] = useState([]);
   const [target, setTarget] = useState();
+  const [lastRemovedItem, setLastRemovedItem] = useState(null);
+
 
 
   useEffect(() => {
@@ -44,21 +46,30 @@ function Results({search, saveState}) {
         });
     }
 
-    function removeItem(classLabel){
-      if(classLabel){
-        const itemIdToRemove = classLabel.name; // Replace with the actual ID of the item you want to remove
-
-          axios.delete(`https://degreeworks.netlify.app/.netlify/functions/api/delete-item/${itemIdToRemove}`)
-            .then((response) => {
-              const receivedItems = response.data;
-              console.log('Item removed:', response.data);
-              setSavedItems(createArray(receivedItems));
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
+    function removeItem(classLabel) {
+      if (classLabel) {
+        const itemIdToRemove = classLabel.name; // Replace with the actual ID
+    
+        axios.delete(`https://degreeworks.netlify.app/.netlify/functions/api/delete-item/${itemIdToRemove}`)
+          .then((response) => {
+            const receivedItems = response.data;
+            console.log('Item removed:', response.data);
+            setSavedItems(createArray(receivedItems));
+            setLastRemovedItem(classLabel); // Set last removed item
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
       }
     }
+
+    function handleUndo() {
+      if (lastRemovedItem) {
+        addItem(lastRemovedItem); // Re-add last removed 
+        setLastRemovedItem(null); // Clear lastRemovedItem state
+      }
+    }    
+    
 
     var classList = (names) =>{
       var result = [];
@@ -116,9 +127,15 @@ function Results({search, saveState}) {
               <button className="remove-button" onClick={() => setTarget(item)}>✕</button>
             </div>
           ))}
+          {lastRemovedItem && (
+            <button className="undo-button" onClick={handleUndo}>
+              Undo
+            </button>
+          )}
         </div>
       );
     };
+    
 
     if (!saveState) {
       let classes;
