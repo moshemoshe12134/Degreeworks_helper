@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Degreeworks_helper/static/css/main.4eee4786.css",
-    "main.js": "/Degreeworks_helper/static/js/main.a71ac20d.js",
+    "main.css": "/Degreeworks_helper/static/css/main.18b46a6e.css",
+    "main.js": "/Degreeworks_helper/static/js/main.a997cf31.js",
     "static/media/logo-no-background.png": "/Degreeworks_helper/static/media/logo-no-background.be39c79de221224a51d2.png",
     "index.html": "/Degreeworks_helper/index.html",
-    "main.4eee4786.css.map": "/Degreeworks_helper/static/css/main.4eee4786.css.map",
-    "main.a71ac20d.js.map": "/Degreeworks_helper/static/js/main.a71ac20d.js.map"
+    "main.18b46a6e.css.map": "/Degreeworks_helper/static/css/main.18b46a6e.css.map",
+    "main.a997cf31.js.map": "/Degreeworks_helper/static/js/main.a997cf31.js.map"
   },
   "entrypoints": [
-    "static/css/main.4eee4786.css",
-    "static/js/main.a71ac20d.js"
+    "static/css/main.18b46a6e.css",
+    "static/js/main.a997cf31.js"
   ]
 }
