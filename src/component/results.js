@@ -7,6 +7,12 @@ function Results({ search, saveState }) {
   const [savedItems, setSavedItems] = useState([]);
   const [lastRemovedItem, setLastRemovedItem] = useState(null);
 
+  //dummy inputs/outputs
+    //Input examples: (following degreeworks format)
+    //Example #1 “CISC. 3140 or 3142 or 3160 or 3171 or 3220”
+    //Example #2 “ECON. 2200 or FINC. 3310 or FINC 3330 or ECON 3400”
+    //Example #3 “BIOL 1002 or BIOL 3003 or BIOL 3004 or CHEM 2200 or CHEM 2201
+
   useEffect(() => {
     if (saveState) {
       axios
