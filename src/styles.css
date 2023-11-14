@@ -250,7 +250,26 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .remove-button:hover{
+    transform: scale(1.03); 
+    transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
+    background-color: rgb(71, 67, 67);
+}
+
+.edit-button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 18px;
+    font-size: 18px;
+    background-color: rgb(78, 74, 74);
+    color: #ffffff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+.edit-button:hover{
     transform: scale(1.03); 
     transition: background-color 0.18s ease-in-out, transform 0.18s ease-in-out; 
     background-color: rgb(71, 67, 67);
