@@ -6,15 +6,15 @@ import AboutUs from "./pages/aboutUs";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login/>}> </Route>
-        <Route path="/Login" element={<Login/>}></Route>
-        <Route path="/AboutUs" element={<AboutUs/>}></Route>
-        <Route path="/Main" element={<Main saveState={false}/>}></Route>
-        <Route path="/Saved" element={<Main saveState={true}/>}></Route>
-      </Routes>
-    </BrowserRouter>
+    
+    <Routes>
+      <Route path="/" element={<Login/>}> </Route>
+      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/aboutUs" element={<AboutUs/>}></Route>
+      <Route path="/main" element={<Main saveState={false}/>}></Route>
+      <Route path="/saved" element={<Main saveState={true}/>}></Route>
+    </Routes>
+
   );
 }
 

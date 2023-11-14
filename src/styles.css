@@ -36,11 +36,10 @@ header {
 
 .top-buttons {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start; 
     align-items: center;
     gap: 10px;
     margin-bottom: 4%;
-    
 }
 
 .button {
@@ -398,3 +397,37 @@ h1 {
     align-items: center;
     gap: 10px;
 }
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #757575;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #757575;
+    transition: background-color 0.3s, color 0.3s;
+  }
+ 
+  /* Hover effect */
+  .login-button:hover {
+    background-color: #616161;
+    border-color: #616161;
+  }
+ 
+  /* Focus effect */
+  .login-button:focus {
+    outline: none;
+    background-color: #616161;
+    border-color: #616161;
+  }
+ 
+  /* Active effect */
+  .login-button:active {
+    background-color: #424242;
+    border-color: #424242;
+  }
+
