@@ -304,14 +304,14 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.18s ease;
     max-width: 26%;
-    border: 1px solid #7c5a5a;
+    border: 1px solid #ffffff4d;
 }
 
 .btn-saved:hover{
-    transform: scale(1.01);
+    transform: scale(1.001);
     transition: background-color 0.18s ease-in-out, transform 0.3s ease-in-out;
-    background-color: rgb(131, 122, 122);
-    border: 0.18px solid #544444;
+    /* background-color: rgb(131, 122, 122); */
+    border: 1px solid #ffffffc4;
 }
 .btn-main{
     display: inline-block;
@@ -324,14 +324,14 @@ input[type="text"] {
     cursor: pointer;
     transition: background-color 0.18s ease;
     max-width: 26%;
-    border: 0.9px solid rgb(220,220,220);
+    border: 1px solid #ffffff4d;
 }
 
 .btn-main:hover{
-    transform: scale(1.01);
+    transform: scale(1.001);
     transition: background-color 0.15s ease-in-out, transform 0.18s ease-in-out;
-    background-color: rgb(131, 122, 122);
-    border: 0.1px solid rgb(131, 122, 122);
+    /* background-color: rgb(131, 122, 122); */
+    border: 1px solid #ffffffc4;
 }
 
 .btn-back {

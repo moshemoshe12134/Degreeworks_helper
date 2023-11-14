@@ -21,7 +21,7 @@ function Navbar({ variant }) { // Use destructuring here to get the variant prop
                         <Link to="/saved" className="btn-main" onClick={() => setSave(true)}>Saved Items</Link>
                     )}
                     <Link to="/login" className="btn-regular">Login</Link>
-                    <Link to="/aboutus" className="btn-regular">About Us</Link>
+                    <Link to="/aboutus" className="btn-regular">About </Link>
                 </div>
             </div>
         </div>
