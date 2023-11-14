@@ -258,7 +258,7 @@ input[type="text"] {
 
 .edit-button{
     display: inline-block;
-    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 6px 18px;
     font-size: 18px;
     background-color: rgb(78, 74, 74);

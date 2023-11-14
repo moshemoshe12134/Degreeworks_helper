@@ -115,6 +115,11 @@ function Results({ search, saveState }) {
     return (
       <div className="saved-items-container">
         <h1 id="saved-items-heading">Saved Items:</h1>
+        {lastRemovedItem && (
+          <button className="edit-button" onClick={handleUndo}>
+            Undo
+          </button>
+        )}
         {savedItems.map((item, index) => (
           <div key={index} className="float">
             <h3>{item.name}</h3>
@@ -122,11 +127,7 @@ function Results({ search, saveState }) {
             <button className="remove-button" onClick={() => removeItem(item)}>✕</button>
           </div>
         ))}
-        {lastRemovedItem && (
-          <button className="edit-button" onClick={handleUndo}>
-            Undo
-          </button>
-        )}
+
       </div>
     );
   };
