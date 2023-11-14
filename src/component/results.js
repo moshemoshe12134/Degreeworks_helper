@@ -123,7 +123,7 @@ function Results({ search, saveState }) {
           </div>
         ))}
         {lastRemovedItem && (
-          <button className="remove-button" onClick={handleUndo}>
+          <button className="edit-button" onClick={handleUndo}>
             Undo
           </button>
         )}

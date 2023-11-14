@@ -267,6 +267,7 @@ input[type="text"] {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
 
 .edit-button:hover{
     transform: scale(1.03); 
