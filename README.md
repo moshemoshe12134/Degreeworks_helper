@@ -1,2 +1,2 @@
 # Degreeworks_helper
- assist with understanding availble courses in degreeworks
+ Webapp to assist CUNY students with understanding, curating and selecting CUNY courses from their degreeworks pathways.
