@@ -7,16 +7,14 @@ function AboutUs() {
     <div>
       <Link to="/main" className="btn-back" >back</Link>
             <div className="main-square">
-                <h1>About</h1>
+                <h1>How-To-Use</h1>
                 <p>
                 Finding courses at Brooklyn College can be difficult and time-consuming.
 
       The Brooklyn College Course Selector lets you quickly look up multiple class descriptions at once by entering course codes separated by commas, spaces, or returns. No more decoding strings of letters and numbers!          
                 </p>
-                <br />
-                <h1>FAQ:</h1>
                 <p>
-                <h2>How to use:</h2> <ul> <li>Enter 2-4 letter/number codes from DegreeWorks</li> <li>Separate codes with commas, spaces, or returns</li> <li>Hit enter or Search to see full descriptions</li> <li>Click Save to save favorites</li> <li>Click again to remove from Saved Items</li> </ul> <h2>What's displayed:</h2> <ul> <li>Course title and full description</li> <li>Credits, prerequisites</li> </ul>
+                <ul><li>For example, enter the string: "CISC. 3140 or 3142 or 3160 or 3171 or 3220" </li> <li>Click Save to save your favorites</li> <li>Click X to remove from Saved Items</li> </ul> <h2>What's displayed:</h2> <ul> <li>Course title and full description</li> </ul>
                 </p>
             </div>
           </div>
